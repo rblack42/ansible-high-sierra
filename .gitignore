@@ -1,0 +1,11 @@
+# Vim
+*~
+*.swp
+
+# Python
+*.pyc
+_venv
+
+# Mac
+.DS_Store
+

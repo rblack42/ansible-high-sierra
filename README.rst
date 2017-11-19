@@ -3,6 +3,8 @@ Mac High Sierra Setup
 
 ..  image:: https://travis-ci.org/rblack42/ansible-high-sierrs.svg?branch=master
 
+..  image:: https://img.shields.io/travis/rblack42/ansible-high-sierra.svg
+
 ..	_Ansible:	https://www.ansible.com/
 
 This project contains Ansible_ code I use to configure a new Mac system. I

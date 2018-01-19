@@ -1,0 +1,4 @@
+admin:
+    name: "{{ lookup('env', 'LOGNAME') }}"
+    home: "{{ lookup('env', 'HOME') }}"
+

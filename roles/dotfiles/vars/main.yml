@@ -1,0 +1,13 @@
+---
+dotfiles_repo: "https://github.com/rblack42/dotfiles.git"
+dotfiles_dest: "~/_sys/dotfiles"
+dotfiles_home: "~"
+dotfiles_files:
+    - .vimrc
+    - .gitconfig
+    - .gitignore
+    - .bashrc
+    - .bash_profile
+    - .bash_aliases
+    - .bash_id
+

@@ -1,0 +1,31 @@
+---
+- name: clone dotfiles repo
+  git:
+      repo: "{{ dotfiles_repo }}"
+      dest: "{{ dotfiles_dest }}"
+  become: no
+      
+- name: Ensure all existing dotfiles are links
+  shell: "ls -F {{ dotfiles_home }}/{{ item }}"
+  register: existing_dotfile_info
+  failed_when: false
+  always_run: yes
+  changed_when: false
+  with_items: "{{ dotfiles_files }}"
+
+- name: remove existing dotfiles if w ehave a new link
+  file:
+    path: "{{ dotfiles_home }}/{{ dotfiles_files[item.0] }}"
+    state: absent
+  when: "'@' not in item.1.stdout"
+  with_indexed_items: "{{ existing_dotfile_info.results }}"
+
+- name: link in dotfiles
+  file:
+    src: "{{dotfiles_dest }}/{{ item }}"
+    dest: "{{ dotfiles_home }}/{{ item }}"
+    state: link
+    force: yes
+  become: no
+  with_items: "{{ dotfiles_files }}"
+

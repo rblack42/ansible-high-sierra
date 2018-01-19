@@ -2,4 +2,12 @@
 - hosts: local
   connection: local
   roles:
-    - setup 
+    - setup
+    - chrome
+    - dropbox
+    - macvim
+    - dotfiles
+    - docker
+    - pandoc
+    - node
+    - python3

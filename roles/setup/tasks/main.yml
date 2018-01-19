@@ -3,5 +3,5 @@
   shell:
     ssh-keygen -b 2048 -t rsa -f /Users/{{ ansible_user }}/.ssh/id_rsa -q -N ""
   args:
-    creates: /root/.ssh/id_rsa
+    creates: //Users/{{ ansible_user }}/.ssh/id_rsa
 

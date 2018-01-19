@@ -1,0 +1,5 @@
+---
+- name: clone make-tools repo
+  git:
+    repo: https://github.com/rblack42/make-tools.git
+    dest: ~/_sys/make

@@ -11,3 +11,4 @@
     - pandoc
     - node
     - python3
+    - make

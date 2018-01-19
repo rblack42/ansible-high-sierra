@@ -7,8 +7,10 @@
 - name: install Vundle
   git:
       repo: https://github.com/VundleVim/Vundle.Vim.git
-      dest: ~/.vim/bundle/Vyndle.vim
+      dest: ~/.vim/bundle/Vundle.vim
 
+- name: install Vundle plugins
+  shell: vim -c VundleUpdate -c quitall > /dev/null
 - name: install editorconfig
   homebrew:
     name: editorconfig
